@@ -1,0 +1,108 @@
+id: 31cec743-ce4c-4466-8981-507959fc93e2
+version: 3
+name: Update All Content
+starttaskid: "0"
+tasks:
+  "0":
+    id: "0"
+    taskid: 4998ed9d-149e-4cbe-8964-214869146d8d
+    type: start
+    task:
+      id: 4998ed9d-149e-4cbe-8964-214869146d8d
+      version: -1
+      name: ""
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "1"
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 50
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+  "1":
+    id: "1"
+    taskid: ca7c2d6a-baa5-44dc-8f08-4d5b7293ae1f
+    type: regular
+    task:
+      id: ca7c2d6a-baa5-44dc-8f08-4d5b7293ae1f
+      version: -1
+      name: UpdateAllContent
+      scriptName: UpdateAllContent
+      type: regular
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "2"
+    reputationcalc: 1
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 200
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+  "2":
+    id: "2"
+    taskid: 60c50b19-c81a-4741-8d44-8ac181983419
+    type: regular
+    task:
+      id: 60c50b19-c81a-4741-8d44-8ac181983419
+      version: -1
+      name: Close
+      description: commands.local.cmd.close.inv
+      script: Builtin|||closeInvestigation
+      type: regular
+      iscommand: true
+      brand: Builtin
+    scriptarguments:
+      assetid: {}
+      closeNotes: {}
+      closeReason: {}
+      code42alerttype: {}
+      emailclassification: {}
+      id: {}
+      phishingsubtype: {}
+    separatecontext: false
+    view: |-
+      {
+        "position": {
+          "x": 450,
+          "y": 390
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 435,
+        "width": 380,
+        "x": 450,
+        "y": 50
+      }
+    }
+  }
+inputs: []
+outputs: []
